@@ -143,7 +143,7 @@ def sendFeedback():
         messagebox.showwarning("Feedback", "No feedback entered.")
 
 def aboutNotepad():
-    messagebox.showinfo("Notepad", "Notepad by Paras")
+    messagebox.showinfo("Notepad", "Notepad by Me")
     
 if __name__ == "__main__":
     root = Tk()
