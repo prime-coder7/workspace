@@ -3,6 +3,20 @@ from tkinter import *
 from tkinter import messagebox, simpledialog, font as tkFont
 from tkinter.filedialog import askopenfilename, asksaveasfilename
 
+# Function to handle loading the image icon
+def load_icon(icon_path):
+    try:
+        # Try to set the icon from the provided path
+        root.iconbitmap(icon_path)
+    except Exception as e:
+        print(f"Error loading icon: {e}")
+        # Fallback icon if the provided path fails
+        fallback_icon = "fallback.ico"  # Make sure this fallback icon is included in the project
+        if os.path.exists(fallback_icon):
+            root.iconbitmap(fallback_icon)
+        else:
+            print("Fallback icon also missing!")
+
 def newFile():
     global file
     root.title("Untitled - Notepad")
@@ -24,7 +38,6 @@ def saveFile():
         file = asksaveasfilename(defaultextension=".txt", filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
     if file:
         with open(file, 'w') as f:
-            # Get content without the extra newline at the end
             content = TextArea.get(1.0, END).strip()  # Strip removes leading/trailing whitespace
             f.write(content)
         root.title(f"{os.path.basename(file)} - Notepad")
@@ -148,9 +161,12 @@ def aboutNotepad():
 if __name__ == "__main__":
     root = Tk()
     root.title("Untitled - Notepad")
-    # root.iconbitmap("notepad.ico")
     root.geometry("600x400")
-
+    
+    # Set the icon for the window (with error handling for missing file)
+    icon_path = "F:/workspace/Notepad/notepad.ico"  # Adjust this to your icon's location
+    load_icon(icon_path)
+    
     TextArea = Text(root, font="lucida 13")
     file = None
     TextArea.pack(expand=TRUE, fill=BOTH)
@@ -201,7 +217,7 @@ if __name__ == "__main__":
     
     # Format Menu: Start
     format_menu = Menu(menubar, tearoff=0)
-    menubar.add_cascade(label="Edit", menu=format_menu)
+    menubar.add_cascade(label="Format", menu=format_menu)
     
     format_menu.add_command(label="Word Wrap", command=toggle_word_wrap)
     format_menu.add_command(label="Font", command=font)
@@ -237,5 +253,4 @@ if __name__ == "__main__":
     root.configure(menu=menubar)    
     # Help Menu: End
     
-
     root.mainloop()
