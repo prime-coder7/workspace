@@ -792,7 +792,7 @@ section
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none; /* Standard property */
-	/* background-image: url(../images/down.png); */
+	background-image: url(../images/down.png);
 	background-position: center right;
 	background-repeat: no-repeat;
 	font-size: 14px !important;
