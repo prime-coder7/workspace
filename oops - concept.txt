@@ -6,17 +6,17 @@ Introduction to C and C++
 Before we get into the details of Object-Oriented Programming (OOP) in C++, it’s helpful to understand the background of programming languages like C 
 and why C++ was developed.
 
-C Language: The C programming language, created in the 1970s, was one of the first widely used programming languages. It was designed for 
-system programming and is known for being simple, efficient, and close to machine code, which made it ideal for creating operating systems and 
-hardware-level software. C focuses on functions and procedures (also known as procedural programming), which means that programs are written as a 
-series of steps or functions that operate on data.
+- C was created in 1972 by Dennis Ritchie at AT&T Bell Labs. It was designed for system programming and is known for being simple, efficient, and close to machine code, which made it ideal for creating operating systems and hardware-level software. 
+
+- C focuses on functions and procedures (also known as procedural programming), which means that programs are written as a series of steps or functions that operate on data.
+
+- C is often referred to as a "mother of modern programming languages" because many popular languages either evolved directly from C or were heavily influenced by it.
 
 -> C++ (1983):
 - Creator: Bjarne Stroustrup at Bell Labs.
 - How It Evolved from C: C++ was designed as an extension of C to support object-oriented programming (OOP). While C focused on procedural programming, 
   C++ introduced key OOP concepts like classes, inheritance, polymorphism, and encapsulation.
-- Influence: C++ retains much of C’s syntax, which made it easier for C programmers to transition to it. C++ was widely adopted for large-scale applications 
-  where both performance and modularity were critical, such as in game development, embedded systems, and real-time applications.
+C++ was widely adopted for large-scale applications where both performance and modularity were critical, such as in game development, embedded systems, and real-time applications.
 
 Now, let's dive into the core concepts of Object-Oriented Programming (OOP) in C++.
 
